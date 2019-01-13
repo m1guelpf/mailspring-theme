@@ -1,0 +1,108 @@
+@import 'base/ui-variables';
+
+@material-blue: #263238;
+@material-teal: #7ab7b4;
+@material-light-teal: #607D8B;
+@material-gray: #323e45;
+@material-green: #b9dc87;
+@material-red: #d74962;
+@material-purple: #af82cf;
+@material-dark-green: #263339;
+@material-active: #00bdd7;
+
+//=============================== Components ===========================//
+
+//== Toolbar
+@input-bg: #1c292f;
+@input-border: @border-color-divider;
+
+@toolbar-background-color: #263339;
+@panel-background-color: #263339;
+
+//== Account Sidebar
+@panel-background-color:         @material-blue;
+@source-list-bg:                 @panel-background-color;
+@source-list-active-bg:          @panel-background-color;
+@source-list-active-color:       @component-active-color;
+
+//== Thread List (e.g, `.list-group-item`, `.list-item`)
+@list-bg:                  @material-light-teal;
+@list-border:              #607D8B;
+@list-hover-bg:            darken(@list-bg, 4%);
+@list-focused-color:       @list-bg;
+@list-focused-bg:          @component-active-color;
+@list-focused-border:      @list-focused-bg;
+@list-selected-color:      inherit;
+@list-selected-bg:         mix(@component-active-color, @list-bg, 17%);
+@list-selected-border:     mix(@component-active-color, @list-bg, 50%);
+
+//== Notifications
+@background-color-info: @material-teal;
+@background-color-success: #009ec4;
+@background-color-warning: #ff4800;
+@background-color-error: #f15f4b;
+@background-color-pending: #b4babd;
+
+//== Menus
+@menu-item-color-hover: fade(@blue-light, 10%);
+@menu-item-color-selected: @blue-light;
+@menu-text-color-selected: @text-color-inverse;
+
+//== Sizes
+@disclosure-arrow-size: 8px;
+
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+@component-border-radius: 2px;
+
+
+//=============================== Colors ===============================//
+
+@accent-primary:      @material-teal;
+@accent-primary-dark: @material-light-teal;
+
+@background-primary:     @material-blue;
+@background-off-primary: @material-blue;
+@background-secondary:   @material-blue;
+@background-tertiary:    @material-blue;
+
+@color-info:    @blue-dark;
+@color-success: #5CB346;
+@color-warning: #f0ad4e;
+@color-error:   #d9534f;
+@color-danger:  #d9534f;
+
+@component-active-color:        @accent-primary-dark;
+@component-active-bg:           @background-primary;
+
+@background-gradient: linear-gradient(to top, rgba(241,241,241,0.75) 0%,
+rgba(253,253,253,0.75) 100%);
+
+@border-color-primary: @material-gray;
+@border-color-secondary: @material-gray;
+@border-color-tertiary: @material-gray;
+@border-color-divider: @material-gray;
+
+//============================= Typography =============================//
+
+@list-selected-color: @text-color-inverse;
+@list-focused-color: @text-color;
+
+// ----- Colors -----
+@text-color:         #edffff;
+@text-color-inverse: @white;
+
+@text-color-heading: @material-teal;
+
+@text-color-link:        @blue;
+@text-color-link-hover:  @blue-dark;
+@text-color-link-active: @blue-dark;
+
+// Features
+@open-tracking-color: @material-purple;
+
+// Menu
+@menu-item-color-selected: @material-teal;
+@menu-text-color-selected: @material-teal;

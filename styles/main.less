@@ -1,0 +1,250 @@
+@import "ui-variables";
+
+// GLOBAL
+a {
+  color: #74b8d7;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="number"], input[type="password"], input[type="range"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"] {
+  background: @background-primary;
+  border: 1px solid @border-color-primary;
+  color: @text-color;
+}
+
+.menu .item.selected, .menu .item:active {
+  background-color: @component-active-color;
+}
+
+.account-sidebar .item.selected, .account-sidebar .item:active {
+  color: @menu-text-color-selected;
+}
+
+.button-dropdown.btn-emphasis .primary-item, .button-dropdown.btn-emphasis .secondary-picker, .button-dropdown.btn-emphasis .only-item {
+  background: #F77669;
+  border: 1px solid #F77669;
+}
+
+.scrollbar-track {
+  background: none;
+  border-left: none;
+  width: 10px;
+  .scrollbar-handle {
+    background: @material-gray;
+    border: none;
+  }
+}
+
+// TOOLBAR
+.sheet-toolbar {
+  border-bottom: 1px solid @border-color-divider;
+  box-shadow: none;
+}
+
+.thread-icon:not(.thread-icon-unread) {
+  -webkit-filter: original(100%);
+}
+img.content-dark {
+  -webkit-filter: invert(100%);
+}
+img.content-light {
+  -webkit-filter: original(100%);
+}
+
+.btn {
+    background-image: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    transition: 0.3s ease all;
+    cursor: pointer;
+    &:hover {
+        background: #607D8B;
+    }
+}
+
+.sheet-toolbar {
+    border-bottom: 1px solid #263339;
+}
+
+.sheet-toolbar-container {
+    background: #313131;
+    background-image: none;
+}
+
+.flexbox-handle-horizontal div {
+    border: none;
+}
+
+.search-bar .menu .header-container input {
+    border: none;
+    background-color: #333;
+}
+
+// THREAD LIST
+.thread-list .list-item, .draft-list .list-item {
+  background: @background-primary;
+  border-bottom: 1px solid @border-color-primary;
+  &:hover {
+    background: @material-gray;
+    .mail-important-icon {
+      opacity: 0.2;
+    }
+  }
+  &.focused:hover {
+    background: @material-gray;
+  }
+}
+
+.thread-list .unread:not(.focused):not(.selected):not(.next-is-selected), .draft-list .unread:not(.focused):not(.selected):not(.next-is-selected) {
+  border-bottom: 1px solid @border-color-primary;
+  &:hover {
+    background: @material-gray;
+  }
+}
+
+.list-container .list-item.focused {
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.thread-list .swipe-backing.swipe-all,
+.thread-list .swipe-backing.swipe-archive,
+.draft-list .swipe-backing.swipe-all,
+.draft-list .swipe-backing.swipe-archive {
+  background: @material-green;
+  &.confirmed {
+    background: saturate(@material-green, 10%);
+  }
+}
+
+.thread-list .swipe-backing.swipe-snooze,
+.draft-list .swipe-backing.swipe-snooze {
+  background: @material-purple;
+  &.confirmed {
+    background: saturate(@material-purple, 10%);
+  }
+}
+
+.thread-list .swipe-backing.swipe-trash,
+.draft-list .swipe-backing.swipe-trash {
+  background: @material-red;
+  &.confirmed {
+    background: saturate(@material-red, 10%);
+  }
+}
+
+.undo-redo {
+  background-color: @material-teal;
+  color: @white;
+}
+
+.undo-redo-message-wrapper {
+  color: @white !important;
+}
+
+.undo-redo-action-wrapper {
+  img {
+    background-color: @white !important;
+  }
+  .undo-redo-action-text {
+    color: @white !important;
+  }
+}
+
+body.is-blurred {
+  .list-container .list-item.focused {
+    background: #7ab7b4;
+    color: #ffffff;
+    border-bottom: 1px solid #7ab7b4;
+  }
+}
+
+// MESSAGE LIST
+.find-in-thread {
+  border-bottom: none;
+}
+
+#message-list {
+  .message-item-wrap .message-item-white-wrap, .footer-reply-area-wrap  {
+    box-shadow: 0 0 0.5px @border-color-primary, 0 1px 1.5px @border-color-primary;
+  }
+  .show-hidden-messages {
+    border: none;
+  }
+}
+
+.button-dropdown .secondary-picker {
+  box-shadow: @border-color-primary 0 0.5px 0, @border-color-primary 0 -0.5px 0, @border-color-primary 0.5px 0 0, @border-color-primary 0 0.5px 1px;
+}
+
+// COMPOSER
+.button-dropdown .primary-item, .button-dropdown .only-item {
+  box-shadow: 0 0.5px 0 @border-color-primary, 0 -0.5px 0 @border-color-primary, 0.5px 0 0 rgba(0, 0, 0, 0.15), -0.5px 0 0 @border-color-primary, 0 0.5px 1px @border-color-primary;
+}
+
+.composer-full-window .composer-inner-wrap .composer-action-bar-wrap {
+  border-top: 1px solid @border-color-primary;
+}
+
+// CONTACT SIDEBAR
+.column-MessageListSidebar {
+  border-left: none;
+  .sidebar-section.visible {
+    background-color: @material-teal;
+    color: @white !important;
+    .participant-profile {
+      .personal-info .email, .additional-info .bio {
+        color: @white !important;
+      }
+    }
+
+    .related-threads {
+      background-color: darken(@material-teal, 10%);
+      .subject, .timestamp, .toggle, .content {
+        color: @white !important;
+      }
+      .related-thread:hover {
+        background-color: @material-gray;
+      }
+    }
+  }
+
+}
+
+// PREFERENCES
+.preferences-wrap {
+  .appearance-mode-switch .appearance-mode {
+    background: @material-gray;
+  }
+  .preferences-accounts .accounts-content .account-details {
+    background-color: transparent;
+  }
+  .container-templates .template-wrap {
+    border: 1px solid @border-color-primary;
+  }
+  .templates-instructions {
+    color: @text-color;
+  }
+}
+
+// TOASTS
+#Threads {
+  .undo-redo-toast .content {
+    .message {
+      color: @material-teal !important;
+    }
+    .action {
+      color: @material-teal !important;
+
+      .content-mask {
+        background-color: @material-teal !important;
+      }
+
+      .undo-action-text, .redo-action-text {
+        color: @material-teal !important;
+      }
+    }
+  }
+}

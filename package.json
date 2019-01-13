@@ -1,0 +1,13 @@
+{
+  "name": "m1guelpf-mailspring",
+  "title": "Miguel Piedrafita's Theme",
+  "displayName": "Miguel Piedrafita's Theme",
+  "theme": "ui",
+  "version": "0.8.0",
+  "description": "Personalized version of a dark material theme for my own use.",
+  "license": "MIT",
+  "engines": {
+    "mailspring": "*"
+  },
+  "private": true
+}
